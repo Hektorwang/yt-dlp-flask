@@ -1,0 +1,6 @@
+ffmpeg
+Flask
+gunicorn
+loguru
+watchdog
+yt-dlp

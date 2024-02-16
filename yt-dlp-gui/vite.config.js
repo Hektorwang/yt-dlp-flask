@@ -18,6 +18,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/config/, '/api/config')
       },
+      '/api/task_state': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/task_state/, '/api/task_state')
+      },
       '/apply': {
         target: 'http://localhost:5000',
         changeOrigin: true,

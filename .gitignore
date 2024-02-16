@@ -1,7 +1,11 @@
 __pycache__
+.mypy_cache
+*.py[cdo]
+build
+dist
 Include
 Lib
+pyvenv.cfg
 Scripts
 share
-pyvenv.cfg
 !.gitignore
