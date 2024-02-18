@@ -3,7 +3,7 @@
     "type": "text",
     "description": "是否启用代理",
     "placeholder": "socks5://127.0.0.1:1080",
-    "value": "socks5://192.168.199.1:18090"
+    "value": "socks5://127.0.0.1:1080"
   },
   "--windows-filenames": {
     "type": "checkbox",
@@ -88,15 +88,15 @@
   },
   "--paths": {
     "type": "text",
-    "placeholder": "d:\\Downloads\\",
+    "placeholder": "/Downloads",
     "required": true,
-    "description": "保存根目录",
-    "value": "d:\\H\\Downloads\\"
+    "description": "文件下载根目录",
+    "value": "/Downloads"
   },
   "--cookies-from-browser": {
     "type": "text",
-    "placeholder": "firefox:d:\\firefox_profile\\",
+    "placeholder": "firefox:/firefox",
     "description": "使用浏览器Cookie",
-    "value": "firefox:d:\\H\\Documents\\firefox_profile"
+    "value": "firefox:/firefox"
   }
 }

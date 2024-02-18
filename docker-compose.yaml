@@ -5,8 +5,10 @@ services:
     container_name: yt-dlp-flask
     ports:
       - "8080:8000"
-    # volumes:
-    #   - /usr/anyesu/docker/tomcat-logs:/downloads
+    volumes:
+      - /mnt/d/H/Downloads/:/Downloads # 下载目录
+      - /mnt/d/H/Documents/firefox_profile/:/firefox:ro # 浏览器目录
+
     restart: always
     # command: |
     #   cd /yt-dlp-flask

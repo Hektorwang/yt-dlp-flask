@@ -81,6 +81,7 @@ def apply() -> wrappers.Response:
                 True if data.get(config_key) == "on" else False
             )
     url = data["url"].split("?")[0]
+    url = data["url"]
     # task_id: str = base64.b64encode(url.encode("utf-8")).decode("utf-8")
     task_id = url
     task_state[task_id] = 99
