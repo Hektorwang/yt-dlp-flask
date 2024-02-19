@@ -11,8 +11,9 @@ COPY static /yt-dlp-flask/static
 
 ADD requments.txt /yt-dlp-flask/
 RUN sed -i.bak "s@http://deb.debian.org/debian@https://mirrors.tuna.tsinghua.edu.cn/debian@g" /etc/apt/sources.list.d/debian.sources && \
-    apt-get -y update && apt-get -y upgrade && apt-get -y install ffmpeg && \
-    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && pip install -r /yt-dlp-flask/requments.txt
+    apt-get -y update && apt-get -y upgrade && apt-get --no-install-recommends -y install ffmpeg && apt-get clean && \
+    export PYTHONDONTWRITEBYTECODE=1 && \
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && pip install --no-cache-dir -r /yt-dlp-flask/requments.txt
 
 WORKDIR /yt-dlp-flask/
 
